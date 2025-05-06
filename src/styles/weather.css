@@ -1,0 +1,93 @@
+/* Layout  */
+.main-nav {
+    position: relative;
+}
+
+.weather-container-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 5vw;
+    gap: 2rem;
+}
+
+/* Weather Section */
+#weather {
+    position: static;
+    flex: 0 0 40%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#weather img {
+    width: 80px;
+}
+
+/* Forecast Cards */
+.forecast-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card img {
+    width: 50px;
+}
+
+#forecastTitle {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header {
+        text-align: center;
+    }
+
+    .main-nav {
+        position: relative;
+        width: 100%;
+    }
+
+    .weather-container-wrapper {
+        display: block;
+        padding: 0;
+        gap: 0;
+    }
+
+    #weather,
+    #forecast {
+        position: static;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    .forecast-cards {
+        margin-top: 2vh;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+    }
+
+    .footer {
+        position: relative;
+    }
+}

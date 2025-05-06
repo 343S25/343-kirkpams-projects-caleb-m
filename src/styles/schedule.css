@@ -1,0 +1,108 @@
+/* Base styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    position: relative;
+}
+
+/* Calendar styles */
+.calendar {
+    width: 100%;
+    max-width: 300px;
+    margin: 6vh auto;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.calendar-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+}
+
+.calendar-day {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+/* Football schedule image */
+#football-sched {
+    position: absolute;
+    right: 7vw;
+    top: 17vh;
+    max-width: 350px;
+}
+
+/* MRD schedule image */
+#mrd-sched {
+    position: absolute;
+    left: 7vw;
+    top: 17vh;
+    max-width: 350px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .main-header {
+        text-align: center;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .calendar-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    #football-sched {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-height: 190px;
+        margin-bottom: 2vh;
+    }
+
+    #mrd-sched {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-height: 190px;
+        margin-bottom: 2vh;
+    }
+
+    .pictures {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer {
+        position: relative;
+    }
+}

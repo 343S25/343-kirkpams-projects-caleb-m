@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caleb T. Meadows">
+    <meta name="description" content="Project MRD's">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>343 Project - MRD's index</title>
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="left-strip"></div>
+    <div class="right-strip"></div>
+
+    <header class="main-header">
+        <h1 class="header-text">The Marching Royal Dukes</h1>
+    </header>
+
+    <main>
+        <nav class="main-nav">
+            <ul class="horizontal-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reminders.html">Reminders</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <img class="full-screen-image" src="images/mrd_fireworks_3.jpg" alt="Marching Royal Dukes on field">
+
+            <div class="weather-container">
+                <div class="weather-text">
+                    <h2>Weather</h2>
+                    <div id="weather-text">
+                        <h2 id="city-name">Loading...</h2>
+                        <img id="weather-icon" src="none" alt="Weather icon">
+                        <p id="weather-desc">Description: Loading...</p>
+                        <p id="temp">Temperature: Loading...</p>
+                        <p id="feels-like">Feels Like: Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="triangle-wrapper">
+            <div class="triangle-up"></div>
+            <img id="mrd-logo" src="images/mrd-logo-purple.png" alt="MRD logo">
+            <div class="triangle-down"></div>
+            <div class="rectangle">
+                <h2 id="virginias-fine">Virginia's Finest</h2>
+            </div>
+            <div class="small-tri"></div>
+        </div>
+        <div class="footer">
+        </div>
+    </footer>
+
+    <script src="scripts/weather.js"></script>
+</body>
+
+</html>

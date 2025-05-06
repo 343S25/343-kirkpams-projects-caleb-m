@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caleb T. Meadows">
+    <meta name="description" content="Project MRD's - Notes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>343 Project - MRD's Notes</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/notes.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="left-strip"></div>
+    <div class="right-strip"></div>
+
+    <header class="main-header">
+        <h1>The Marching Royal Dukes</h1>
+    </header>
+
+    <main>
+        <nav class="main-nav">
+            <ul class="horizontal-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reminders.html">Reminders</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+        <div>
+            <section id="noteSection">
+                <h2 id="noteH2">Add Note</h2>
+                <form id="noteForm">
+                    <label for="noteInput">Your Note</label>
+                    <textarea id="noteInput" name="note" placeholder="Write a new note" required></textarea>
+                    <button type="submit">Add Note</button>
+                </form>
+            </section>
+
+            <div class="notes-container-notes">
+                <div class="notes-grid">
+                    <h2 id="yourNotesH2">Your Notes</h2>
+                    <div id="notesBox"></div>
+                    <div id="notesList" class="notes-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="triangle-wrapper">
+                <div class="triangle-up"></div>
+                <img id="mrdLogo" src="images/mrd-logo-purple.png" alt="MRD logo">
+                <div class="triangle-down"></div>
+                <div class="rectangle">
+                    <h2 id="virginiasFine">Virginia's Finest</h2>
+                </div>
+                <div class="small-tri"></div>
+            </div>
+            <div class="footer">
+            </div>
+        </footer>
+    </main>
+    <script src="scripts/notes.js"></script>
+</body>
+
+</html>

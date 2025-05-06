@@ -1,0 +1,40 @@
+/* main nav styling */
+.main-nav {
+    position: relative;
+    width: 66%;
+}
+
+.report {
+
+    margin: 5vh;
+    position: relative;
+    text-align: center;
+}
+
+/* list styling */
+.ordered-wrapper {
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.ordered-list {
+    padding-left: 3vw;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .main-nav {
+        width: 100%;
+    }
+
+    .ordered-list {
+        padding-left: 5vw;
+    }
+}

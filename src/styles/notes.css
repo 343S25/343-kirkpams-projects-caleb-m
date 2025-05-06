@@ -1,0 +1,139 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+main {
+    flex: 1; 
+}
+
+#noteSection {
+    position: relative;
+    top: 20vh;
+    width: 300px;
+    height: 300px;
+    margin-left: 2vw;
+    background-color: rgb(128, 128, 128, 0.8);
+    border-radius: 15px;
+}
+
+#noteH2 {
+    text-align: center;
+    padding-top: 1vh;
+}
+
+#noteForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+#noteInput {
+    width: 80%;
+    max-width: 600px;
+    min-height: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+#notesBox {
+    background-color: white;
+    /* White background */
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notes-container-notes {
+    position: relative;
+    background-color: rgb(128, 128, 128, 0.8);
+    color: white;
+    position: absolute;
+    top: 28vh;
+    width: 50vw;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    right: 2.5vw;
+    overflow-y: auto;
+}
+
+#yourNotesH2 {
+    position: absolute;
+    top: 2vh;
+}
+
+.notes-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.notes-list {
+    color: black;
+    background-color: white;
+    margin-top: 5vh;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        text-align: center;
+    }
+
+    .main-nav {
+        position: relative;
+        width: 100%;
+    }
+
+    #noteSection {
+        position: relative;
+        top: 0;
+        margin: 2vh auto;
+        width: 90vw;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .notes-container-notes {
+        position: relative;
+        top: 0;
+        margin: 2vh auto;
+        width: 90vw;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #yourNotesH2 {
+        color: black;
+        position: static;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .notes-grid {
+        width: 100%;
+        height: auto;
+    }
+
+    .notes-list {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+    }
+}
