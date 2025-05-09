@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caleb T. Meadows">
+    <meta name="description" content="Project MRD's">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>343 Project - MRD's calander</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/calendar.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="left-strip"></div>
+    <div class="right-strip"></div>
+
+    <header class="main-header">
+        <h1 class="header-text">The Marching Royal Dukes</h1>
+    </header>
+
+    <main>
+        <nav class="main-nav">
+            <ul class="horizontal-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reminders.html">Reminders</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </nav>
+        <section id="calendar-container">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button type="button" id="prev-month">&lt;</button>
+                    <span id="month-name"></span> <span id="year"></span>
+                    <button type="button" id="next-month">&gt;</button>
+                </div>
+                <div class="days-container">
+                    <div class="calendar-days" id="calendar-days"></div>
+                </div>
+            </div>
+            <div id="event-list" class="notes-list"></div>
+        </section>
+
+        <div class="form" id="form">
+            <form class="form-container">
+                <h1 id="form-title">Add your event!</h1>
+
+                <label for="eventinput"><b>Event</b></label>
+                <input type="text" class="eventArea" id="event-input" placeholder="Enter here" name="email" required>
+
+                <button type="submit" id="btn-cancel" class="btn cancel">Add</button>
+                <button type="button" id="btn-exit" onclick="closeFormInit()">Exit</button>
+            </form>
+        </div>
+
+        <script src="scripts/calendar.js"></script>
+    </main>
+</body>
+
+</html>

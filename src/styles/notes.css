@@ -70,12 +70,14 @@ main {
 #yourNotesH2 {
     position: absolute;
     top: 2vh;
+    color: black;
 }
 
 .notes-grid {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
 }
 
@@ -83,7 +85,22 @@ main {
     color: black;
     background-color: white;
     margin-top: 5vh;
+    max-width: 100%;
 }
+
+.note-actions {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.note-actions button {
+    margin: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
 
 @media (max-width: 768px) {
     .main-header {
@@ -108,6 +125,7 @@ main {
         position: relative;
         top: 0;
         margin: 2vh auto;
+        margin-left: 7vw;
         width: 90vw;
         height: auto;
         padding: 1rem;
@@ -131,6 +149,13 @@ main {
     .notes-list {
         margin-top: 0;
         width: 100%;
+    }
+
+    .note-actions {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
     }
 
     .footer {

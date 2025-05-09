@@ -151,7 +151,7 @@ body {
     height: 70px;
     background-color: rgba(125, 125, 125, 0.7);
     z-index: 6;
-
+  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,7 +201,7 @@ body {
     }
 
     .main-nav {
-        width: 30%;
+        width: 100%;
         height: auto;
         justify-content: center;
     }

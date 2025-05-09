@@ -60,3 +60,51 @@ noteForm.addEventListener("submit", e => {
 });
 
 renderNotes();
+
+// Export notes as JSON
+document.getElementById("exportBtn").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(notes, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "notes.json";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// Import notes from JSON
+document.getElementById("importBtn").addEventListener("click", () => {
+  document.getElementById("importInput").click();
+});
+
+document.getElementById("importInput").addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const importedNotes = JSON.parse(e.target.result);
+      if (Array.isArray(importedNotes)) {
+        notes = importedNotes;
+        saveNotes();
+        renderNotes();
+        alert("Notes imported successfully.");
+      } else {
+        alert("Invalid file format.");
+      }
+    } catch (err) {
+      alert("Error reading file: " + err.message);
+    }
+  };
+  reader.readAsText(file);
+});
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (confirm("Are you sure you want to delete all notes?")) {
+    notes = [];
+    saveNotes();
+    renderNotes();
+  }
+});
+

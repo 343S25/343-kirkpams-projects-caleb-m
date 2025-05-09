@@ -1,0 +1,154 @@
+/* Base styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    position: relative;
+}
+
+/* Calendar styles */
+.calendar {
+    width: 100%;
+    max-width: 90%;
+    height: 100%;
+    margin: 2vh auto;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    height: 100%;
+    max-height: 400px;
+
+}
+
+.calendar-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.days-container>div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.calendar-day {
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    justify-content: center;
+    text-align: center;
+    min-height: 22vh;
+}
+
+.calendar-days div {
+    display: grid;
+    background-color: #f1f1f1;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.calendar-days>div:hover {
+    background-color: #B599CE
+}
+
+.event {
+    display: flex;
+    flex-direction: column; /* Stack p and buttons vertically */
+    background-color: #d0d0ff;
+    border-radius: 4px;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+    
+    max-width: 45%;
+    align-items: stretch;
+}
+
+.event p {
+    margin: 0;
+    font-weight: bold;
+    white-space: normal;
+    width: 45%;
+    text-align: left;
+    max-height: auto;
+}
+
+
+.event > div {
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 6px;
+    width: 25%;
+    max-height: 5vh;
+    border: none;
+    border: none;
+    outline: none;
+    background: transparent; /* optional, in case there's background color too */
+    padding: 0; /* reset spacing if needed */
+    margin: 0;
+    bottom: 5px;
+}
+
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+    font-size: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    background-color: #ccc;
+    max-height: 20px;
+}
+
+
+.form {
+    background-color: white;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid black;
+    max-width: 300px;
+    max-height: 130px;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container {
+    padding: 10px;
+    background-color: white;
+}
+
+#form-title {
+    margin-bottom: 3vh;
+    text-align: center;
+}
