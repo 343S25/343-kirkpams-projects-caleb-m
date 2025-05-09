@@ -151,7 +151,7 @@ body {
     height: 70px;
     background-color: rgba(125, 125, 125, 0.7);
     z-index: 6;
-  
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,4 +264,24 @@ body {
     .triangle-wrapper {
         display: none;
     }
+
+
+    .navbar-nav .nav-link {
+        font-size: 0.85rem;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #weather-text {
+        max-height: 70%;
+        
+    }
+
+    #weather-text p {
+        margin: none;
+    }
+    
+
 }

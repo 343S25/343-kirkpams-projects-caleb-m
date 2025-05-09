@@ -27,7 +27,6 @@
                 <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="notes.html">Notes</a></li>
                 <li><a href="weather.html">Weather</a></li>
-                <li><a href="report.html">Report</a></li>
             </ul>
         </nav>
         <section id="calendar-container">
@@ -48,13 +47,24 @@
             <form class="form-container">
                 <h1 id="form-title">Add your event!</h1>
 
-                <label for="eventinput"><b>Event</b></label>
+                <label for="event-input"><b>Event</b></label>
                 <input type="text" class="eventArea" id="event-input" placeholder="Enter here" name="email" required>
 
                 <button type="submit" id="btn-cancel" class="btn cancel">Add</button>
                 <button type="button" id="btn-exit" onclick="closeFormInit()">Exit</button>
             </form>
         </div>
+
+        <div class="data-controls">
+            <button type="button" onclick="exportEvents()">Export Events</button>
+
+            <label for="importFile" class="custom-file-upload">Import Events</label>
+            <input type="file" id="importFile" accept=".json" onchange="importEvents(event)" hidden>
+
+            <button type="button" onclick="clearAllEvents()">Clear All Events</button>
+        </div>
+
+
 
         <script src="scripts/calendar.js"></script>
     </main>

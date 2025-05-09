@@ -36,10 +36,14 @@ const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&
 fetch(forecastUrl)
     .then(res => res.json())
     .then(data => {
+        //stores one forecast per day
         const dailyData = {};
 
+        //process forcasts
         data.list.forEach(entry => {
+            //gets date
             const date = entry.dt_txt.split(' ')[0];
+            //gets hour
             const hour = entry.dt_txt.split(' ')[1].split(':')[0];
 
             if (!dailyData[date] || Math.abs(hour - 12) < Math.abs(dailyData[date].hour - 12)) {
@@ -52,10 +56,13 @@ fetch(forecastUrl)
             }
         });
 
+        //rend forecast div cards for next 3 days
         const forecastCards = document.getElementById('forecastCards');
         const dates = Object.keys(dailyData).slice(1, 4);
         dates.forEach(date => {
             const { temp, description, icon } = dailyData[date];
+
+            //creates forecast card
             const card = document.createElement('div');
             card.className = 'forecast-card';
             card.innerHTML = `
@@ -64,6 +71,7 @@ fetch(forecastUrl)
             <p>${temp.toFixed(1)}°F</p>
             <p>${description}</p>
           `;
+            // adds card to container
             forecastCards.appendChild(card);
         });
     })

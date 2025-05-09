@@ -8,7 +8,9 @@ function saveNotes() {
   localStorage.setItem("notes", JSON.stringify(notes));
 }
 
+//render all notes on page
 function renderNotes() {
+  //clear notes
   notesList.innerHTML = "";
   notes.forEach(note => {
     const div = document.createElement("div");
@@ -25,6 +27,7 @@ function renderNotes() {
 
 function addNote(text) {
   const note = {
+    //date gives unique ID
     id: "note_" + Date.now(),
     text,
     timestamp: new Date().toLocaleString()
@@ -40,6 +43,7 @@ function deleteNote(id) {
   renderNotes();
 }
 
+//edit note through id
 function editNote(id) {
   const note = notes.find(n => n.id === id);
   const newText = prompt("Edit your note:", note.text);
@@ -50,6 +54,7 @@ function editNote(id) {
   }
 }
 
+//submission for new note
 noteForm.addEventListener("submit", e => {
   e.preventDefault();
   const text = noteInput.value.trim();
@@ -61,7 +66,7 @@ noteForm.addEventListener("submit", e => {
 
 renderNotes();
 
-// Export notes as JSON
+//exports notes
 document.getElementById("exportBtn").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(notes, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -72,11 +77,12 @@ document.getElementById("exportBtn").addEventListener("click", () => {
   URL.revokeObjectURL(url);
 });
 
-// Import notes from JSON
+//gets hidden form for input
 document.getElementById("importBtn").addEventListener("click", () => {
   document.getElementById("importInput").click();
 });
 
+//imports notes from selected file
 document.getElementById("importInput").addEventListener("change", (event) => {
   const file = event.target.files[0];
   if (!file) return;
@@ -100,6 +106,7 @@ document.getElementById("importInput").addEventListener("change", (event) => {
   reader.readAsText(file);
 });
 
+//clear all notes
 document.getElementById("clearBtn").addEventListener("click", () => {
   if (confirm("Are you sure you want to delete all notes?")) {
     notes = [];

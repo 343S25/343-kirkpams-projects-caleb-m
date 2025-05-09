@@ -25,10 +25,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 10px;
-    height: 100%;
     max-height: 400px;
-
+    padding: 0 10px;
 }
 
 .calendar-header {
@@ -37,110 +35,88 @@ body {
     font-size: 18px;
 }
 
+.calendar-days,
 .days-container>div {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     padding: 10px;
     cursor: pointer;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    border: 1px solid black;
+    background-color: #f1f1f1;
+}
+
+.calendar-days>div:hover,
+.calendar-day:hover {
+    background-color: #B599CE;
 }
 
 .calendar-day {
     cursor: pointer;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
+    border: 1px solid black;
     justify-content: center;
     text-align: center;
     min-height: 22vh;
 }
 
-.calendar-days div {
-    display: grid;
-    background-color: #f1f1f1;
-    grid-template-columns: repeat(7, 1fr);
-    padding: 10px;
-    cursor: pointer;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-
-.calendar-days>div:hover {
-    background-color: #B599CE
-}
-
+/* Event styles */
 .event {
     display: flex;
-    flex-direction: column; /* Stack p and buttons vertically */
-    background-color: #d0d0ff;
+    flex-direction: column;
     border-radius: 4px;
     margin-top: 4px;
     font-size: 12px;
     line-height: 1.4;
-    
-    max-width: 45%;
+    border: none;
+    max-width: 100%;
     align-items: stretch;
 }
 
 .event p {
     margin: 0;
     font-weight: bold;
-    white-space: normal;
-    width: 45%;
     text-align: left;
-    max-height: auto;
 }
 
-
-.event > div {
-    border: none;
+.event>div {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     gap: 6px;
-    width: 25%;
-    max-height: 5vh;
-    border: none;
-    border: none;
-    outline: none;
-    background: transparent; /* optional, in case there's background color too */
-    padding: 0; /* reset spacing if needed */
-    margin: 0;
-    bottom: 5px;
+    padding-top: 4px;
+    padding-left: 5px;
 }
 
+/* Button styles */
+.button-group {
+    position: relative;
+}
 
 .edit-btn,
 .delete-btn {
-    flex: 1;
     font-size: 10px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     color: black;
     background-color: #ccc;
-    max-height: 20px;
+    height: 20px;
 }
 
-
+/* Form styles */
 .form {
     background-color: white;
     display: none;
     position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid black;
-    max-width: 300px;
-    max-height: 130px;
     z-index: 9;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: 3px solid black;
+    box-sizing: border-box;
 }
 
 .form-container {
@@ -151,4 +127,60 @@ body {
 #form-title {
     margin-bottom: 3vh;
     text-align: center;
+}
+
+/* Data control styles */
+.data-controls {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.data-controls button,
+.custom-file-upload {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #ccc;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 4px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-header {
+        text-align: center;
+    }
+
+    .main-nav {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        margin: 0;
+    }
+
+    .calendar-container {
+        max-width: 90%;
+        max-height: 50%;
+    }
+
+    .calendar-day {
+        max-height: 2vh;
+    }
+
+    .data-controls button {
+        width: 50%;
+    }
+
+    .event p {
+        font-size: 0.75em;
+    }
 }

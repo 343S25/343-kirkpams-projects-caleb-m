@@ -19,17 +19,18 @@
         <h1 class="header-text">The Marching Royal Dukes</h1>
     </header>
 
+    <nav class="main-nav">
+        <ul class="horizontal-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reminders.html">Reminders</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="report.html">Report</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <nav class="main-nav">
-            <ul class="horizontal-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="reminders.html">Reminders</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="notes.html">Notes</a></li>
-                <li><a href="weather.html">Weather</a></li>
-                <li><a href="report.html">Report</a></li>
-            </ul>
-        </nav>
 
         <div>
             <img class="full-screen-image" src="images/mrd_fireworks_3.jpg" alt="Marching Royal Dukes on field">
@@ -39,10 +40,19 @@
                     <h2>Weather</h2>
                     <div id="weather-text">
                         <h2 id="city-name">Loading...</h2>
-                        <img id="weather-icon" src="none" alt="Weather icon">
+                        <img id="weather-icon" src="images/nothing.jpg" alt="Weather icon">
                         <p id="weather-desc">Description: Loading...</p>
                         <p id="temp">Temperature: Loading...</p>
                         <p id="feels-like">Feels Like: Loading...</p>
+                        <p id="min-max" style="display: none;"></p>
+                        <p id="humidity" style="display: none;"></p>
+                        <p id="wind" style="display: none;"></p>
+                        <p id="clouds" style="display: none;"></p>
+                        <p id="sunrise" style="display: none;"></p>
+                        <p id="sunset" style="display: none;"></p>
+                        <p id="local-time" style="display: none;"></p>
+                        <div id="forecastCards" style="display: none"></div>
+
                     </div>
                 </div>
             </div>

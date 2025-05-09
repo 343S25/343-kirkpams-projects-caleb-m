@@ -1,6 +1,7 @@
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let currentDate = new Date();
 
+//renders calendar
 function renderCalendar(date) {
     const month = date.getMonth();
     const year = date.getFullYear();
